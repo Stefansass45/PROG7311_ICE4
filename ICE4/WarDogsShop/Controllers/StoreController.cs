@@ -5,12 +5,7 @@ namespace WarDogsShop.Controllers
 {
     public class StoreController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    StoreModel model = new StoreModel();
-
-        //    return View(model);
-        //}
+        
 
         public IActionResult Index(string title)
         {
