@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 USE master;
 GO
 
@@ -379,4 +377,3 @@ VALUES
     ('Zoly', 'Prescriptions', 7.20);
     
     GO
->>>>>>> Stashed changes
