@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using PabloAPI.Data;
+
 namespace PabloAPI
 {
     public class Program
@@ -13,6 +16,11 @@ namespace PabloAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<DbConfig>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DbServer"));
+            });
 
             var app = builder.Build();
 
