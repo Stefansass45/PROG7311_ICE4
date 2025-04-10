@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+    Drugs-db:
+        build: 
+            context: ./DrugsDB
+            dockerfile: Dockerfile
+        container_name: Drugs-db
+        environment:
+            ACCEPT_EULA: "Y"
+            MSSQL_PID: "Express"
+            MSSQL_SA_PASSWORD: "Password1!"
+        ports: 
+            - "1433:1433"
+            - "1400:1433"
+        volumes:
+        - db_data:/var/opt/mssql
+        - ./logs:/var/opt/mssql/log  # Optional: To access logs
+        restart: always  # Automatically restart on failure
+        networks:
+        - Drugs-network 
+
+    api-service:
+        build:
+            context: .
+            dockerfile: ./PabloAPI/Dockerfile 
+        container_name: api-service
+        environment:
+            SQL_CONNECTION_STRING: "Server=Drugs-db;Database=Drugs;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=Password1!"
+        ports:
+        - "8080:8080"
+        depends_on:
+            Drugs-db:
+                condition: service_healthy
+        networks:
+        - Drugs-network        
+ 
+networks:
+    Drugs-network:
+        driver: bridge
+
+volumes:
+    db_data:
