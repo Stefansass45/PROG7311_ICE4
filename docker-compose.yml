@@ -28,7 +28,7 @@ services:
         environment:
             SQL_CONNECTION_STRING: "Server=Drugs-db;Database=Drugs;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=Password1!"
         ports:
-        - "8080:8080"
+        - "5000:8080"
         depends_on:
             Drugs-db:
                 condition: service_healthy
