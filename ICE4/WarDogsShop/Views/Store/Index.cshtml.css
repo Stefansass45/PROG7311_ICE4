@@ -1,0 +1,97 @@
+﻿body {
+    background-color: black;
+}
+
+.title {
+    font-size: 100px;
+    font-family: Consolas;
+    color:white;
+
+}
+
+.subtitle {
+    font-size: 40px;
+    color: white;
+    font-family: Consolas;
+}
+
+.cat-div {
+    font-size: 30px;
+    color: white;
+    font-family: Consolas;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+    .cat-div p {
+        padding: 0px;
+        padding-top: 20px;
+        margin: 0px;
+    }
+
+.p-narc {
+    color: #00EEFF;
+}
+
+.p-hallu {
+    color: #8400FF;
+}
+
+.p-perscript {
+    color: #F2FF00;
+}
+
+.img-icon {
+    height: auto;
+    width: 75%;
+}
+
+@keyframes rainbow {
+    0% {
+        background: red;
+    }
+
+    14% {
+        background: orange;
+    }
+
+    28% {
+        background: yellow;
+    }
+
+    42% {
+        background: green;
+    }
+
+    57% {
+        background: blue;
+    }
+
+    71% {
+        background: indigo;
+    }
+
+    85% {
+        background: violet;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+
+.div-narc, .div-hallu, .div-perscript {
+    transition: background-color 0.5s ease; 
+}
+
+
+    .div-narc:hover,
+    .div-hallu:hover,
+    .div-perscript:hover {
+        animation: rainbow 3s linear infinite;
+        color: black;
+        cursor: pointer;
+    }
