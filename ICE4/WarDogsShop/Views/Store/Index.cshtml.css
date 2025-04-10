@@ -43,10 +43,7 @@
     color: #F2FF00;
 }
 
-.img-icon {
-    height: auto;
-    width: 75%;
-}
+
 
 @keyframes rainbow {
     0% {
@@ -83,15 +80,54 @@
 }
 
 
-.div-narc, .div-hallu, .div-perscript {
-    transition: background-color 0.5s ease; 
+
+
+@keyframes rainbowFilter {
+    0% {
+        filter: invert(31%) sepia(78%) saturate(1000%) hue-rotate(0deg) brightness(100%);
+    }
+
+    20% {
+        filter: invert(40%) sepia(60%) saturate(1200%) hue-rotate(60deg) brightness(110%);
+    }
+
+    40% {
+        filter: invert(50%) sepia(50%) saturate(1400%) hue-rotate(120deg) brightness(120%);
+    }
+
+    60% {
+        filter: invert(60%) sepia(40%) saturate(1600%) hue-rotate(180deg) brightness(130%);
+    }
+
+    80% {
+        filter: invert(70%) sepia(30%) saturate(1800%) hue-rotate(240deg) brightness(140%);
+    }
+
+    100% {
+        filter: invert(31%) sepia(78%) saturate(1000%) hue-rotate(360deg) brightness(100%);
+    }
 }
 
 
-    .div-narc:hover,
-    .div-hallu:hover,
-    .div-perscript:hover {
-        animation: rainbow 3s linear infinite;
-        color: black;
-        cursor: pointer;
-    }
+.cat-div {
+    transition: filter 0.5s ease;
+}
+
+
+.cat-div:hover {
+    animation: rainbowFilter 6s linear infinite;
+    color: black;
+    cursor: pointer;
+}
+
+.img-icon {
+    height: auto;
+    width: 75%;
+    transition: filter 0.5s ease;
+}
+
+.img-icon:hover {
+    height: auto;
+    width: 75%;
+    animation: rainbowFilter 6s linear infinite;
+}

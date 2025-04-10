@@ -1,118 +1,59 @@
-﻿@model WarDogsShop.Models.StoreModel
-
+﻿@model WarDogsShop.Models.StoreModel;
 
 @{
     ViewData["Title"] = "Store Page";
 }
 
-
 <head>
     <link rel="stylesheet" href="StorePage/Index.cshtml.css">
 
     <style>
-
         body {
-            background-color: black;
+        background-color: black;
         }
+
+
     </style>
 </head>
 
 <body>
     <div class="text-center">
-
-        <h1 class="title">@Model.title</h1>
-
+        <h1 class="title">@Model.Category</h1>
     </div>
-
-
 
     <div class="container overflow-hidden">
         <div class="row gy-5">
-            <div class="col-3">
-                <div class="p-3">
-                    <div class="cat-div div-narc">
-                        <img class="img-icon" src="Images/Image1.png" alt="My Image" />
-                        <p class="p-narc">/Narcotics</p>
+
+
+
+
+            @foreach (var item in Model.Products)
+            {
+                @if (item.Category == Model.Category)
+                {
+                    <div class="col-3">
+                        <div class="p-3">
+                            <div class="cat-div div-product">
+                                @if (item.Category == "Narcotics")
+                                {
+                                    <img class="img-icon" src="Images/Image1.png" alt="Product Image" />
+                                }
+                                else if (item.Category == "Hallucinogens")
+                                {
+                                    <img class="img-icon" src="Images/Image2.png" alt="Product Image" />
+                                }
+                                else
+                                {
+                                    <img class="img-icon" src="Images/Image3.png" alt="Product Image" />
+                                }
+                                <p class="p-product">@item.Name</p>
+                                <p class="p-product-price">$@item.Price</p>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="p-3">
-                    <div class="cat-div div-hallu">
-                        <img class="img-icon" src="Images/Image2.png" alt="My Image" />
-                        <p class="p-hallu">/Hallucinates</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="p-3">
-
-                    <div class="cat-div div-perscript">
-                        <img class="img-icon" src="Images/Image3.png" alt="My Image" />
-                        <p class="p-perscript">/Prescriptions</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div class="p-3">
-
-                    <div class="cat-div div-perscript">
-                        <img class="img-icon" src="Images/Image3.png" alt="My Image" />
-                        <p class="p-perscript">/Prescriptions</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div class="p-3">
-                    <div class="cat-div div-narc">
-                        <img class="img-icon" src="Images/Image1.png" alt="My Image" />
-                        <p class="p-narc">/Narcotics</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div class="p-3">
-                    <div class="cat-div div-narc">
-                        <img class="img-icon" src="Images/Image1.png" alt="My Image" />
-                        <p class="p-narc">/Narcotics</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div class="p-3">
-                    
-
-
-                    <div class="cat-div div-narc">
-                        <img class="img-icon" src="Images/Image1.png" alt="My Image" />
-                        <p class="p-narc">/Narcotics</p>
-                    </div>
-                    
-
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div class="p-3">
-                    <div class="cat-div div-narc">
-                        <img class="img-icon" src="Images/Image1.png" alt="My Image" />
-                        <p class="p-narc">/Narcotics</p>
-                    </div>
-
-                </div>
-            </div>
+                }
+               
+            }
         </div>
     </div>
 </body>
-
-

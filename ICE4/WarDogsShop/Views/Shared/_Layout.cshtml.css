@@ -83,7 +83,7 @@ button.accept-policy {
 
 
 .navbar {
-    animation: rainbow 3s linear infinite; 
+    animation: rainbow 8s linear infinite; 
     color: white; 
     font-family: Consolas;
 }
