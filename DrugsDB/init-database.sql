@@ -359,7 +359,6 @@ VALUES
     ('Valium', 'Prescriptions', 6.75),
     ('Vallies', 'Prescriptions', 6.80),
     ('VanillaSky', 'Narcotics', 40.00),
-    ('Vapes', 'Narcotics', 20.25),
     ('Viagra', 'Prescriptions', 41.00),
     ('Vitamin K', 'Narcotics', 58.00),
     ('Volatile substances', 'Narcotics', 11.50),
