@@ -114,20 +114,20 @@
 }
 
 
-.cat-div:hover {
-    animation: rainbowFilter 6s linear infinite;
-    color: black;
-    cursor: pointer;
-}
+    .cat-div:hover {
+        animation: rainbowFilter 1s linear infinite;
+        color: black;
+        cursor: pointer;
+    }
 
 .img-icon {
     height: auto;
     width: 75%;
-    transition: filter 0.5s ease;
+    transition: filter 0.15s ease;
 }
 
 .img-icon:hover {
     height: auto;
     width: 75%;
-    animation: rainbowFilter 6s linear infinite;
+    animation: rainbowFilter 0.25s linear infinite;
 }

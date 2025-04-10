@@ -20,7 +20,13 @@ namespace WarDogsShop.Controllers
 
             model.Products = await _context.Product.ToListAsync();
 
-            model.Category = title;
+            if (title != null)
+            {
+                model.Category = title;
+                return View(model);
+            }
+
+            model.Category = "All";
 
 
             return View(model);

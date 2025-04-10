@@ -29,7 +29,33 @@
 
             @foreach (var item in Model.Products)
             {
-                @if (item.Category == Model.Category)
+                @if (Model.Category != "All")
+                {
+                    @if (item.Category == Model.Category)
+                    {
+                        <div class="col-3">
+                            <div class="p-3">
+                                <div class="cat-div div-product">
+                                    @if (item.Category == "Narcotics")
+                                    {
+                                        <img class="img-icon" src="Images/Image1.png" alt="Product Image" />
+                                    }
+                                    else if (item.Category == "Hallucinogens")
+                                    {
+                                        <img class="img-icon" src="Images/Image2.png" alt="Product Image" />
+                                    }
+                                    else
+                                    {
+                                        <img class="img-icon" src="Images/Image3.png" alt="Product Image" />
+                                    }
+                                    <p class="p-product">@item.Name</p>
+                                    <p class="p-product-price">$@item.Price</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
                 {
                     <div class="col-3">
                         <div class="p-3">
@@ -52,6 +78,8 @@
                         </div>
                     </div>
                 }
+
+               
                
             }
         </div>
