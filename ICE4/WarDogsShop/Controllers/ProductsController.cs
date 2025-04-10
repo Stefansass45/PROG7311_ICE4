@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WarDogsShop.Models;
 
-namespace WarDogsShop
+namespace WarDogsShop.Controllers
 {
     public class ProductsController : Controller
     {
