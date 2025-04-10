@@ -9,7 +9,7 @@ services:
         environment:
             ACCEPT_EULA: "Y"
             MSSQL_PID: "Express"
-            MSSQL_SA_PASSWORD: "Password1!"
+            MSSQL_SA_PASSWORD: "Password1"
         ports: 
             - "1433:1433"
             - "1400:1433"
@@ -23,10 +23,10 @@ services:
     api-service:
         build:
             context: .
-            dockerfile: ./PabloAPI/Dockerfile 
+            dockerfile: ./WarDogsShop/Dockerfile 
         container_name: api-service
         environment:
-            SQL_CONNECTION_STRING: "Server=Drugs-db;Database=Drugs;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=Password1!"
+            SQL_CONNECTION_STRING: "Server=Drugs-db;Database=Drugs;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=Password1"
         ports:
         - "5000:8080"
         depends_on:
