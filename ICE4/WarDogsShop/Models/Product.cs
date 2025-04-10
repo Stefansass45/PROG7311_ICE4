@@ -1,12 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
-using Microsoft.EntityFrameworkCore;
-using PabloAPI.Data;
-
-namespace PabloAPI.Model
-{
-    public class Product
+namespace WarDogsShop.Models { 
+ public class Product
     {
         [Key]
         public int id { get; set; }

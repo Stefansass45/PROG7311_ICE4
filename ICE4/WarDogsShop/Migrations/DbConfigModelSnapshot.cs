@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PabloAPI.Data;
+using WarDogsShop;
 
 #nullable disable
 
-namespace PabloAPI.Migrations
+namespace WarDogsShop.Migrations
 {
     [DbContext(typeof(DbConfig))]
     partial class DbConfigModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace PabloAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PabloAPI.Model.Product", b =>
+            modelBuilder.Entity("WarDogsShop.Models.Product", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
