@@ -1,7 +1,4 @@
-﻿
-
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -13,10 +10,13 @@
     <link rel="stylesheet" href="Home/Index.cshtml.css">
 
     <style>
-        
-        body{
-            background-color:black;
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
         }
+
+       
     </style>
 </head>
 
@@ -27,6 +27,30 @@
 
         <h3 class="subtitle">How Would You Like To Continue...</h3>
 
+    </div>
+
+    <div class="sidebar left-sidebar">
+
+        <div class="ad-card add-4">
+            <p>Download Bitcon For Free!!!</p>
+            <button class="add-4-btn">
+                Click Here!
+            </button>
+        </div>
+
+        <div class="ad-card add-2">
+            <img src="Images/ad1.png" alt="Ad 1" />
+            <p>Click Here To Play Super Mario</p>
+
+        </div>
+
+        <div class="ad-card add-6">
+            <img src="Images/Ad6.jpg" alt="Ad 1" />
+            <p>Click Here To Play</p>
+
+        </div>
+
+      
     </div>
 
 
@@ -41,35 +65,53 @@
                             <p class="p-narc">/Narcotics</p>
                         </div>
                     </a>
-                    
-                    
+
+
                 </div>
             </div>
             <div class="col-4">
                 <div class="p-3">
                     <a class="card-a-tag" href='@Url.Action("Index", "Store", new { title = "Hallucinogens" })'>
-                    <div class="cat-div div-hallu">
-                        <img class="img-icon" src="Images/Image2.png" alt="My Image" />
-                        <p class="p-hallu">/Hallucinates</p>
-                    </div>
+                        <div class="cat-div div-hallu">
+                            <img class="img-icon" src="Images/Image2.png" alt="My Image" />
+                            <p class="p-hallu">/Hallucinates</p>
+                        </div>
                     </a>
-                    
+
                 </div>
             </div>
             <div class="col-4">
                 <div class="p-3">
                     <a class="card-a-tag" href='@Url.Action("Index", "Store", new { title = "Prescriptions" })'>
-           
-                    <div class="cat-div div-perscript">
-                        <img class="img-icon" src="Images/Image3.png" alt="My Image" />
-                        <p class="p-perscript">/Prescriptions</p>
-                    </div>
+
+                        <div class="cat-div div-perscript">
+                            <img class="img-icon" src="Images/Image3.png" alt="My Image" />
+                            <p class="p-perscript">/Prescriptions</p>
+                        </div>
                     </a>
-                    
+
                 </div>
             </div>
         </div>
     </div>
-</body>
 
+    <div class="sidebar right-sidebar">
+        <div class="ad-card add-3">
+            <img src="Images/Ad3.jpg" alt="Ad 3" />
+        </div>
+        <div class="ad-card add-4">
+            <p>Download Bitcon For Free!!!</p>
+            <button class="add-4-btn">
+                Click Here!
+            </button>
+        </div>
+
+        <div class="ad-card add-5">
+            
+                <img class="img-add5" src="Images/Ad5.jpg" alt="Ad 1" />
+                <p class="overlay-text">You'll Never Believe This One Simple Trick To Get Rid Of Back Pain</p>
+          
+        </div>
+    </div>
+</body>
 
