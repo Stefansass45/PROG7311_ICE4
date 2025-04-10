@@ -184,7 +184,6 @@ VALUES
     ('Hubble bubble', 'Narcotics', 20.50),
     ('Huffing', 'Narcotics', 9.25),
     ('Ice', 'Narcotics', 77.00),
-    ('Image and performance enhancing drug (IPEDs)', 'Prescriptions', 50.00),
     ('Indopan', 'Hallucinogens', 36.00),
     ('Inhalants', 'Narcotics', 8.00),
     ('Inxity', 'Prescriptions', 6.90),
