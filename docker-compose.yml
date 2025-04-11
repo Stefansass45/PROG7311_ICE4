@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-    Drugs-db:
+    drugs-db:
         build: 
             context: ./DrugsDB
             dockerfile: Dockerfile
-        container_name: Drugs-db
+        container_name: drugs-db
         environment:
             ACCEPT_EULA: "Y"
             MSSQL_PID: "Express"
@@ -22,15 +22,15 @@ services:
 
     api-service:
         build:
-            context: .
-            dockerfile: ./WarDogsShop/Dockerfile 
+            context: ./ICE4
+            dockerfile: Dockerfile 
         container_name: api-service
         environment:
-            SQL_CONNECTION_STRING: "Server=Drugs-db;Database=Drugs;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=Password1"
+            SQL_CONNECTION_STRING: "Server=drugs-db;Database=Drugs;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=Password1"
         ports:
         - "5000:8080"
         depends_on:
-            Drugs-db:
+            drugs-db:
                 condition: service_healthy
         networks:
         - Drugs-network        
