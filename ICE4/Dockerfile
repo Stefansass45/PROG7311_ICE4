@@ -27,4 +27,4 @@ RUN dotnet publish "./WarDogsShop.csproj" -c $BUILD_CONFIGURATION -o /app/publis
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WarDogsShop.dll"]
+ENTRYPOINT ["dotnet", "WarDogsShopCopy.dll"]
