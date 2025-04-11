@@ -1,14 +1,14 @@
 USE master;
 GO
 
-IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'Drugs2')
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'Drugs')
 BEGIN
-    CREATE DATABASE Drugs2;
+    CREATE DATABASE Drugs;
 END
 GO
 
 
-Use Drugs2;
+Use Drugs;
 GO
 
 Create table Product(

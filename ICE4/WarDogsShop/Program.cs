@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace WarDogsShop
 {
     public class Program
@@ -8,6 +10,11 @@ namespace WarDogsShop
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<DbConfig>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DbServer"));
+            });
 
             var app = builder.Build();
 
