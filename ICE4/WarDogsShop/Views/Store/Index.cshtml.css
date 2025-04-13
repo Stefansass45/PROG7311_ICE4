@@ -26,6 +26,13 @@
     padding: 20px;
 }
 
+.a-product {
+    font-size: 30px;
+    color: white;
+    font-family: Consolas;
+    text-decoration: none
+}
+
     .cat-div p {
         padding: 0px;
         padding-top: 20px;
