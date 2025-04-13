@@ -13,7 +13,8 @@ namespace WarDogsShop
 
             builder.Services.AddDbContext<DbConfig>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DbServer"));
+                //options.UseSqlServer(builder.Configuration.GetConnectionString("DbServer"));
+                options.UseSqlServer(Environment.GetEnvironmentVariable("SQL_CONNECTION_STRING"));
             });
 
             var app = builder.Build();

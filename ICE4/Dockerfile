@@ -12,9 +12,9 @@ ENV SQL_CONNECTION_STRING="Server=host.docker.internal,1400;Database=Drugs;Trust
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["WarDogsShop/WarDogsShop.csproj", "WarDogsShopCopy/"]
+COPY ["WarDogsShop/", "WarDogsShopCopy/"]
 RUN dotnet restore "./WarDogsShopCopy/WarDogsShop.csproj"
-COPY . .
+#COPY . .
 WORKDIR "/src/WarDogsShopCopy"
 RUN dotnet build "./WarDogsShop.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
@@ -27,4 +27,4 @@ RUN dotnet publish "./WarDogsShop.csproj" -c $BUILD_CONFIGURATION -o /app/publis
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WarDogsShopCopy.dll"]
+ENTRYPOINT ["dotnet", "WarDogsShop.dll"]
