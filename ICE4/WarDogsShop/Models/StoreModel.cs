@@ -7,7 +7,7 @@ namespace WarDogsShop.Models
         public string Category { get; set; }
         public IEnumerable<Product> Products { get; set; }
 
-      
-        
+
+
     }
 }

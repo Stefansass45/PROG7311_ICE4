@@ -1,0 +1,68 @@
+﻿@model WarDogsShop.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<head>
+    <link rel="stylesheet" href="StorePage/Delete.cshtml.css">
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .img-icon {
+            height: auto;
+            width: 75%;
+            transition: filter 0.15s ease;
+        }
+
+    </style>
+</head>
+
+<h1 class="title">Delete</h1>
+
+<h3 class="subtitle">Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <div class="row">
+        <div class="col-4">
+            <div class="p-3">
+                <div class="cat-div div-product">
+
+                    @if (Model.Category == "Narcotics")
+                    {
+                        <img class="img-icon" src="~/Images/Image1.png" alt="Product Image" />
+                    }
+                    else if (Model.Category == "Hallucinogens")
+                    {
+                        <img class="img-icon" src="~/Images/Image2.png" alt="Product Image" />
+                    }
+                    else
+                    {
+                        <img class="img-icon" src="~/Images/Image3.png" alt="Product Image" />
+                    }
+
+                    <p class="p-product">@Model.Name</p>
+                    <p class="p-product-price">$@Model.Price</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="p-3">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="id" />
+                    <input type="submit" value="Delete" class="btn btn-danger" /> |
+                    <a asp-action="Index">Back to List</a>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+   
+</div>

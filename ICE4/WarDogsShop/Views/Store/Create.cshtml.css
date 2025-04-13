@@ -1,0 +1,11 @@
+﻿body {
+    background-color: black;
+    font-family: Consolas;
+    color: white;
+}
+
+.title {
+    font-size: 100px;
+    font-family: Consolas;
+    color: white;
+}
