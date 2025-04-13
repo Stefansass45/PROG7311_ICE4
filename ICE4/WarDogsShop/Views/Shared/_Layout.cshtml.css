@@ -1,6 +1,11 @@
 ﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+body{
+    padding-top:60px;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -46,3 +51,60 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+@keyframes rainbow {
+    0% {
+        background: red;
+    }
+
+    14% {
+        background: orange;
+    }
+
+    28% {
+        background: yellow;
+    }
+
+    42% {
+        background: green;
+    }
+
+    57% {
+        background: blue;
+    }
+
+    71% {
+        background: indigo;
+    }
+
+    85% {
+        background: violet;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: rainbow 8s linear infinite;
+    color: white;
+    font-family: Consolas;
+}
+
+.navbar-nav .nav-link-custom {
+    color: white; 
+}
+
+.nav-link-custom{
+}
+
+    .navbar-nav .nav-link-custom:hover {
+        animation: rainbow 3s linear infinite;
+    }
+

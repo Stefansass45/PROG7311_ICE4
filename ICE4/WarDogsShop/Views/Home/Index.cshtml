@@ -2,7 +2,133 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+
+
+<head>
+    <link rel="stylesheet" href="Home/Index.cshtml.css">
+
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            padding-top: 60px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="text-center">
+
+        <h1 class="title">Welcome To War Dogs</h1>
+
+        <h3 class="subtitle">How Would You Like To Continue...</h3>
+
+    </div>
+
+    <div class="sidebar left-sidebar">
+
+        <div class="ad-card add-4">
+            <p>Download Bitcon For Free!!!</p>
+            <button class="add-4-btn">
+                Click Here!
+            </button>
+        </div>
+
+        <div class="ad-card add-2">
+            <img src="Images/ad1.png" alt="Ad 1" />
+            <p>Click Here To Play Super Mario</p>
+
+        </div>
+
+        <div class="ad-card add-6">
+            <img src="Images/Ad6.jpg" alt="Ad 1" />
+            <p>Click Here To Play</p>
+
+        </div>
+
+      
+    </div>
+
+
+
+    <div class="container overflow-hidden">
+        <div class="row gy-5">
+            <div class="col-4">
+                <div class="p-3">
+                    <a class="card-a-tag" href='@Url.Action("Index", "Store", new { title = "Narcotics" })'>
+                        <div class="cat-div div-narc">
+                            <img class="img-icon" src="Images/Image1.png" alt="My Image" />
+                            <p class="p-narc">/Narcotics</p>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-3">
+                    <a class="card-a-tag" href='@Url.Action("Index", "Store", new { title = "Hallucinogens" })'>
+                        <div class="cat-div div-hallu">
+                            <img class="img-icon" src="Images/Image2.png" alt="My Image" />
+                            <p class="p-hallu">/Hallucinates</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-3">
+                    <a class="card-a-tag" href='@Url.Action("Index", "Store", new { title = "Prescriptions" })'>
+
+                        <div class="cat-div div-perscript">
+                            <img class="img-icon" src="Images/Image3.png" alt="My Image" />
+                            <p class="p-perscript">/Prescriptions</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar right-sidebar">
+        <div class="ad-card add-3">
+            <img src="Images/Ad3.jpg" alt="Ad 3" />
+        </div>
+        <div class="ad-card add-4">
+            <p>Download Bitcon For Free!!!</p>
+            <button class="add-4-btn">
+                Click Here!
+            </button>
+        </div>
+
+        <div class="ad-card add-5">
+            
+                <img class="img-add5" src="Images/Ad5.jpg" alt="Ad 1" />
+                <p class="overlay-text">You'll Never Believe This One Simple Trick To Get Rid Of Back Pain</p>
+          
+        </div>
+    </div>
+</body>
+
+
+<!--
+
+References:
+
+amoghdesign amoghdesign (n.d.). Mushrooms. [website image] flaticon. Available at: https://www.flaticon.com/free-icon/food_10590285?term=shrooms&page=1&position=2&origin=search&related_id=10590285 [Accessed 13 Apr. 2025].
+
+Freepik (n.d.). Drugs. [Website Image] Flaticon. Available at: https://www.flaticon.com/free-icon/drugs_4813848?term=drugs&page=1&position=20&origin=search&related_id=4813848 [Accessed 13 Apr. 2025].
+
+Innersloth (n.d.). Among Us Title Card. [Website Image] Epic Games Store. Available at: https://store.epicgames.com/en-US/p/among-us [Accessed 13 Apr. 2025].
+
+MMO & MMORPG Games (n.d.). Raid Shadow Legends. [Web Image] MMO & MMORPG Games. Available at: https://www.mmommorpggames.com/mmorpg/raid-shadow-legends/ [Accessed 13 Apr. 2025].
+
+Smashicons (n.d.). Pills. [Website Image] flaticon. Available at: https://www.flaticon.com/free-icon/pills_3000118?term=drugs&page=1&position=16&origin=search&related_id=3000118 [Accessed 13 Apr. 2025].
+
+-->

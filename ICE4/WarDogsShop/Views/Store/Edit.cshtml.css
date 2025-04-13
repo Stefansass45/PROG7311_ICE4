@@ -1,0 +1,187 @@
+﻿body {
+    background-color: black;
+}
+
+.title {
+    font-size: 100px;
+    font-family: Consolas;
+    color: white;
+}
+
+.subtitle {
+    font-size: 40px;
+    color: white;
+    font-family: Consolas;
+}
+
+.form-group {
+    font-size: 20px;
+    color: white;
+    font-family: Consolas;
+    padding-bottom: 20px;
+}
+
+.cat-div {
+    font-size: 30px;
+    color: white;
+    font-family: Consolas;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+    .cat-div p {
+        padding: 0px;
+        padding-top: 20px;
+        margin: 0px;
+    }
+
+
+
+@keyframes rainbow {
+    0% {
+        background: red;
+    }
+
+    14% {
+        background: orange;
+    }
+
+    28% {
+        background: yellow;
+    }
+
+    42% {
+        background: green;
+    }
+
+    57% {
+        background: blue;
+    }
+
+    71% {
+        background: indigo;
+    }
+
+    85% {
+        background: violet;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+
+
+
+@keyframes rainbowFilter {
+    0% {
+        filter: invert(31%) sepia(78%) saturate(1000%) hue-rotate(0deg) brightness(100%);
+    }
+
+    20% {
+        filter: invert(40%) sepia(60%) saturate(1200%) hue-rotate(60deg) brightness(110%);
+    }
+
+    40% {
+        filter: invert(50%) sepia(50%) saturate(1400%) hue-rotate(120deg) brightness(120%);
+    }
+
+    60% {
+        filter: invert(60%) sepia(40%) saturate(1600%) hue-rotate(180deg) brightness(130%);
+    }
+
+    80% {
+        filter: invert(70%) sepia(30%) saturate(1800%) hue-rotate(240deg) brightness(140%);
+    }
+
+    100% {
+        filter: invert(31%) sepia(78%) saturate(1000%) hue-rotate(360deg) brightness(100%);
+    }
+}
+
+
+.cat-div {
+    transition: filter 0.5s ease;
+}
+
+
+    .cat-div:hover {
+        animation: rainbowFilter 1s linear infinite;
+        color: black;
+        cursor: pointer;
+    }
+
+.img-icon {
+    height: auto;
+    width: 75%;
+    transition: filter 0.15s ease;
+}
+
+    .img-icon:hover {
+        height: auto;
+        width: 75%;
+        animation: rainbowFilter 0.25s linear infinite;
+    }
+
+
+.btn-primary {
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    font-family: Consolas;
+    transition: filter 0.15s ease;
+    border: white;
+}
+
+
+    .btn-primary:hover {
+        animation: rainbow 2s linear infinite;
+        color: white;
+        font-family: Consolas;
+    }
+
+
+button {
+    font-size: 20px;
+    font-family: Consolas;
+}
+
+
+@keyframes rainbow {
+    0% {
+        background: red;
+    }
+
+    14% {
+        background: orange;
+    }
+
+    28% {
+        background: yellow;
+    }
+
+    42% {
+        background: green;
+    }
+
+    57% {
+        background: blue;
+    }
+
+    71% {
+        background: indigo;
+    }
+
+    85% {
+        background: violet;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+

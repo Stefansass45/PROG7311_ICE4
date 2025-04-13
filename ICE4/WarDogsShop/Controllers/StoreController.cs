@@ -1,27 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WarDogsShop;
 using WarDogsShop.Models;
 
-namespace WarDogsShop
+namespace WarDogsShop.Controllers
 {
-    public class ProductsController : Controller
+    public class StoreController : Controller
     {
         private readonly DbConfig _context;
 
-        public ProductsController(DbConfig context)
+
+        public StoreController(DbConfig context)
         {
             _context = context;
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string title)
         {
-            return View(await _context.Product.ToListAsync());
+            StoreModel model = new StoreModel();
+
+            model.Products = await _context.Product.ToListAsync();
+
+
+            if (title != null)
+            {
+                model.Category = title;
+                return View(model);
+            }
+
+            model.Category = "All";
+
+
+            return View(model);
         }
 
         // GET: Products/Details/5
@@ -41,6 +52,7 @@ namespace WarDogsShop
 
             return View(product);
         }
+
 
         // GET: Products/Create
         public IActionResult Create()
@@ -63,6 +75,9 @@ namespace WarDogsShop
             }
             return View(product);
         }
+
+
+
 
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -116,6 +131,8 @@ namespace WarDogsShop
         }
 
         // GET: Products/Delete/5
+
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -153,4 +170,24 @@ namespace WarDogsShop
             return _context.Product.Any(e => e.id == id);
         }
     }
+
+
+    //public IActionResult Index(string title)
+    //{
+    //    StoreModel model = new StoreModel();
+
+    //    if (title != null)
+    //    {
+    //        model.title = title;
+    //        return View(model);
+    //    }
+
+
+    //    model.title = "Store";
+    //    return View(model);
+
+    //}
 }
+
+
+

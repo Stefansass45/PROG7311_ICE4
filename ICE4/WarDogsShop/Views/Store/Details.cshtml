@@ -1,0 +1,87 @@
+﻿@model WarDogsShop.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<head>
+
+    <link rel="stylesheet" href="StorePage/Details.cshtml.css">
+
+    <style>
+        body {
+            background-color: black;
+            padding-top: 60px;
+        }
+
+        .img-icon {
+            height: auto;
+            width: 75%;
+            transition: filter 0.15s ease;
+        }
+
+    </style>
+</head>
+
+<h1 class="title">Details: @Model.Name</h1>
+
+<div>
+    <div class="row">
+        <div class="col-6">
+            <div class="p-3">
+                <div class="cat-div div-product">
+
+                    @if (Model.Category == "Narcotics")
+                    {
+                        <img class="img-icon" src="~/Images/Image1.png" alt="Product Image" />
+                    }
+                    else if (Model.Category == "Hallucinogens")
+                    {
+                        <img class="img-icon" src="~/Images/Image2.png" alt="Product Image" />
+                    }
+                    else
+                    {
+                        <img class="img-icon" src="~/Images/Image3.png" alt="Product Image" />
+                    }
+
+                    <p class="p-product">@Model.Name</p>
+                    <p class="p-product-price">$@Model.Price</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="p-3">
+
+                <div class="mt-3">
+                    <a asp-action="Edit" asp-route-id="@Model?.id" class="btn btn-primary me-2">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@Model?.id" class="btn btn-danger me-2">Delete</a>
+                    <a href='@Url.Action("Index", "Store", new { title = Model?.Category })' class="btn btn-secondary">
+                        Back to Category
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!--
+
+References:
+
+amoghdesign amoghdesign (n.d.). Mushrooms. [website image] flaticon. Available at: https://www.flaticon.com/free-icon/food_10590285?term=shrooms&page=1&position=2&origin=search&related_id=10590285 [Accessed 13 Apr. 2025].
+
+Freepik (n.d.). Drugs. [Website Image] Flaticon. Available at: https://www.flaticon.com/free-icon/drugs_4813848?term=drugs&page=1&position=20&origin=search&related_id=4813848 [Accessed 13 Apr. 2025].
+
+Innersloth (n.d.). Among Us Title Card. [Website Image] Epic Games Store. Available at: https://store.epicgames.com/en-US/p/among-us [Accessed 13 Apr. 2025].
+
+MMO & MMORPG Games (n.d.). Raid Shadow Legends. [Web Image] MMO & MMORPG Games. Available at: https://www.mmommorpggames.com/mmorpg/raid-shadow-legends/ [Accessed 13 Apr. 2025].
+
+Smashicons (n.d.). Pills. [Website Image] flaticon. Available at: https://www.flaticon.com/free-icon/pills_3000118?term=drugs&page=1&position=16&origin=search&related_id=3000118 [Accessed 13 Apr. 2025].
+
+-->
