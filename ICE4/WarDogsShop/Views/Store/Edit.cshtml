@@ -79,7 +79,9 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a href='@Url.Action("Index", "Store", new { title = Model?.Category })' class="btn btn-secondary">
+        Back to Category
+    </a>
 </div>
 
 @section Scripts {

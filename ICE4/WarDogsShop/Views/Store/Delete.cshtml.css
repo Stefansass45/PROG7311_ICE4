@@ -120,3 +120,62 @@
         object-fit: contain;
         animation: rainbowFilter 0.25s linear infinite;
     }
+
+
+.btn-primary {
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    font-family: Consolas;
+    transition: filter 0.15s ease;
+    border: white;
+}
+
+
+    .btn-primary:hover {
+        animation: rainbow 2s linear infinite;
+        color: white;
+        font-family: Consolas;
+    }
+
+
+button {
+    font-size: 20px;
+    font-family: Consolas;
+}
+
+
+@keyframes rainbow {
+    0% {
+        background: red;
+    }
+
+    14% {
+        background: orange;
+    }
+
+    28% {
+        background: yellow;
+    }
+
+    42% {
+        background: green;
+    }
+
+    57% {
+        background: blue;
+    }
+
+    71% {
+        background: indigo;
+    }
+
+    85% {
+        background: violet;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
