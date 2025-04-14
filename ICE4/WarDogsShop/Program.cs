@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 
 namespace WarDogsShop
@@ -16,6 +17,7 @@ namespace WarDogsShop
                 //options.UseSqlServer(builder.Configuration.GetConnectionString("DbServer"));
                 options.UseSqlServer(Environment.GetEnvironmentVariable("SQL_CONNECTION_STRING"));
             });
+            Debug.WriteLine(Environment.GetEnvironmentVariable("SQL_CONNECTION_STRING"));
 
             var app = builder.Build();
 
