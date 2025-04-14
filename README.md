@@ -32,3 +32,14 @@ A few key things we learned with this that will help for future deployments:
 - The reason we do the COPY . . AFTER doing the initial project copy and restore is due because it utilizes dockers cache better, making future redeployments much faster: https://stackoverflow.com/questions/53460002/how-to-use-dotnet-restore-properly-in-dockerfile
 - The SQL Server container takes a few minutes to become fully responsive and will report "HEALTHY" before it's internal structures are all operational. Thus, wait a bit after deploying before using it
 - We can enable development mode for more verbose errors on ASP.NET : https://stackoverflow.com/questions/54901609/how-to-set-the-environment-of-dotnet-core-in-docker
+
+## 🧭 Instructions
+
+*You must have docker and docker-compose installed on your system*
+
+1. Download the ZIP: https://github.com/Stefansass45/PROG7311_ICE4/archive/refs/heads/main.zip
+2. Unzip the file
+3. Open a terminal at the root of the folder
+3. Run `docker-compose up --build`
+4. Access the web platform on http://localhost:5000
+5. Profit
