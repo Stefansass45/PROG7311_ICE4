@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/mssql/server:2022-latest
 # Set environment variables required for SQL Server
 ENV ACCEPT_EULA=Y 
 ENV MSSQL_PID=Express 
-ENV MSSQL_SA_PASSWORD=Password1
+ENV MSSQL_SA_PASSWORD=PastaGongDuck38*
 
 # Switch to root for directory creation and additional setups
 USER root
