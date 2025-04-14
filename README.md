@@ -10,7 +10,7 @@ Ran scaffolding for controller based on EF Core implementation
 Helped write SQL file
 Fixed issues with docker files
 
-### Stephan
+### Stefan
 Made the project file and worked on the different docker files, the sql file and the docker compose file with help from Monte on key parts in the compose file
 
 ### Hannah
